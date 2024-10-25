@@ -1,0 +1,71 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.central-form {
+    position: relative; /* Necessary for positioning the Spline viewer */
+    text-align: center;
+    padding: 20px;
+    background-color: #000; /* Black background for the form area */
+    color: #fff; /* White text color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Maximum width */
+}
+
+/* Styling for the input fields and submit button */
+input[type="text"], input[type="submit"] {
+    padding: 10px;
+    margin-top: 10px; /* Spacing between input fields */
+    width: 90%; /* Responsive width */
+    border: none;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50; /* Green background for submit button */
+    color: white;
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+input[type="text"] {
+    background-color: #fff; /* White background for text input */
+    color: #333; /* Dark text color for visibility */
+}
+
+/* Spline viewer positioned at the top right corner */
+.central-form::before {
+    content: "";
+    position: absolute;
+    width: 10px; /* Small size for the Spline viewer */
+    height: 10px; /* Small size for the Spline viewer */
+    top: 5px;
+    right: 5px;
+    background: url('https://prod.spline.design/FVZWbQH2B6ndj9UU/scene.splinecode') no-repeat center center;
+    background-size: cover; /* Ensure the icon covers the area */
+}
+
+@media (max-width: 600px) {
+    .central-form {
+        width: 100%; /* Full width on smaller screens */
+        margin: 10px;
+        padding: 20px;
+    }
+}

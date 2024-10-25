@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Transport in Bhubaneswar</title>
+    <link rel="stylesheet" href="style3.css">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
+    <style>
+        /* General body styles */
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://i.ibb.co/3dq0Spp/DALL-E-2024-10-18-13-00-09-A-detailed-2-D-animated-scene-featuring-several-public-buses-as-the-main.webp');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover; /* This ensures the background covers the full page */
+            background-position: center; /* This centers the background image */
+        }
+    
+        /* Styles for the central form */
+        .central-form {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for the form */
+            color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+    
+        /* Input field styles */
+        input[type="text"], input[type="submit"] {
+            padding: 10px;
+            margin-top: 10px;
+            width: 90%;
+            border: none;
+            border-radius: 4px;
+        }
+    
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    
+        input[type="text"] {
+            background-color: #fff;
+            color: #333;
+        }
+    </style>
+    
+</head>
+<body class="public-transport-bg">
+    <div class="central-form">
+        <spline-viewer url="https://prod.spline.design/FVZWbQH2B6ndj9UU/scene.splinecode" class="spline-corner"></spline-viewer>
+        <h1>Public Transport in Bhubaneswar</h1>
+        <p>Find public transport options from Place A to Place B.</p>
+        <form id="public-transport-form">
+            <input type="text" placeholder="Enter start location" name="start">
+            <input type="text" placeholder="Enter destination" name="end">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <script src="public-transport.js"></script>
+</body>
+</html>

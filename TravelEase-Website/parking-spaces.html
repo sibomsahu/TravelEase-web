@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Spaces in Bhubaneswar</title>
+    <link rel="stylesheet" href="style2.css">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
+    <style>
+        /* General body styles */
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://i.ibb.co/RjHmRMr/leonardo2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover; /* This ensures the background covers the full page */
+            background-position: center; /* This centers the background image */
+        }
+    
+        /* Styles for the central form */
+        .central-form {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for the form */
+            color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+    
+        /* Input field styles */
+        input[type="text"], input[type="submit"] {
+            padding: 10px;
+            margin-top: 10px;
+            width: 90%;
+            border: none;
+            border-radius: 4px;
+        }
+    
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    
+        input[type="text"] {
+            background-color: #fff;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="central-form">
+        <spline-viewer url="https://prod.spline.design/FVZWbQH2B6ndj9UU/scene.splinecode" class="spline-corner"></spline-viewer>
+        <h1>Parking Spaces in Bhubaneswar</h1>
+        <p>Find available parking spaces near your location.</p>
+        <form id="parking-spaces-form">
+            <input type="text" placeholder="Enter your location" name="location">
+            <input type="submit" value="Find Parking">
+        </form>
+    </div>
+    <script src="parking-spaces.js"></script>
+</body>
+</html>
